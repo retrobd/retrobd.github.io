@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preload" href="https://imasdk.googleapis.com/js/sdkloader/ima3.js" as="script">
+    <head>
+        <title>Bangla Retro TV</title>
+    </head>
+    <body>
+        
+        <div id="tv_cover" class="center">
+            <h1 id="tv_title"> পুরোনো বাংলা দূরদর্শন </h1>
+            <div id="tv_content" class="center"></div>
+            <img id="tv_frame" src="assets/media/tv-frame.png" alt="tv_frame">
+            <button id="tv_powerbutton" class="round-button" onclick="powerFn()">Power</button>
+            <button id="nextButton" class="round-button" onclick="nextContent()">Next</button>
+        </div>
+        <audio id="tvNoiseSound" src="assets/media/noise_buzz.mp3" preload="auto"></audio>
+
+    </body>
+    <script src="assets/js/tv_content_list.js"></script>
+    <script src="assets/js/ytcontrol.js"></script>
+    <script src="assets/js/main.js"></script>
+</html>
