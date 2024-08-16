@@ -25,21 +25,21 @@ button#stopVideo{
     position: relative;
     margin-top: -20%;
     margin-left: 81%;
-    opacity: 100;
+    opacity: 0;
 }
 
 button#powerButton{
     position: relative;
     margin-top: 39%;
     margin-left: 85%;
-    opacity: 100;
+    opacity: 0;
 }
 
 button#nextButton{
     position: relative;
     margin-top: 1%;
     margin-left: 85%;
-    opacity: 100;
+    opacity: 0;
 }
 
 img#tv_frame{
@@ -64,8 +64,12 @@ div#tv_content {
 } */
 
 #tv_iframe{
-    /* background-image: url("../img/glitch-effect.gif"); */
     display: none;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
 }
 
 .center {

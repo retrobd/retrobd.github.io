@@ -10,7 +10,7 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('tv_iframe', {
         height: '320',
         width: '400',
-        videoId: 'tgbNymZ7vqY',
+        videoId: '0xXjmb_86aw',
         playerVars: {
             'playsinline': 1
         },
@@ -24,8 +24,8 @@ function onPlayerReady(event) {
     event.target.playVideo();
 }
 
-function changeVideo(){
-    player.loadVideoById("NiGZKrdSZkM");
+function changeVideo(myVideoID){
+    player.loadVideoById(myVideoID);
 }
 
 function stopVideo() {
