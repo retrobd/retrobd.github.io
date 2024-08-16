@@ -1,5 +1,15 @@
 console.log("yt")
 
+document.getElementById('tv_powerbutton').addEventListener('click', startVideo);
+// document.getElementById('startVideo').addEventListener('click', pauseVideo);
+// document.getElementById('stopVideo').addEventListener('click', pauseVideo);
+
+// document.getElementById('pauseVideo').addEventListener('click', pauseVideo);
+// document.getElementById('resumeVideo').addEventListener('click', resumeVideo);
+
+// document.getElementById('muteVideo').addEventListener('click', muteVideo);
+// document.getElementById('unmuteVideo').addEventListener('click', unmuteVideo);
+
 // document.addEventListener('DOMContentLoaded', function() {
 //     var iframe = document.getElementById('tv_iframe');
 

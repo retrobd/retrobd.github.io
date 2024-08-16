@@ -58,10 +58,10 @@ div#tv_content {
     /* background-image: url("../img/glitch-effect.gif"); */
 }
 
-iframe#tv_iframe{
+/* iframe#tv_iframe{
     height: 320px;
     width: 400px;
-}
+} */
 
 .center {
     margin: auto;
