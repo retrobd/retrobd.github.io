@@ -5,6 +5,10 @@ var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 var player;
+var videoQueue = getAllVideoID();
+var currentVideoIndex = 0;
+
+console.log(videoQueue);
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('tv_iframe', {
@@ -12,12 +16,32 @@ function onYouTubeIframeAPIReady() {
         width: '400',
         videoId: '0xXjmb_86aw',
         playerVars: {
-            'playsinline': 1
+            // 'playsinline': 1,
+            'controls': 0,
+            'rel': 0, 
+            'modestbranding': 1,
+            'showinfo' : 0
         },
         events: {
-            'onReady': onPlayerReady
+            'onReady': onPlayerReady,
+            'onStateChange' : onPlayerStateChange
         }
     });
+}
+
+function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.ENDED) {
+      playNextVideo();
+    }
+}
+
+function playNextVideo() {
+    currentVideoIndex++;
+    if (currentVideoIndex < videoQueue.length) {
+      player.loadVideoById(videoQueue[currentVideoIndex]);
+    } else {
+      console.log('End of playlist');
+    }
 }
 
 function onPlayerReady(event) {

@@ -42,3 +42,14 @@ function getVideoID(keyList){
     const randomID = getRandom(tempList);
     return randomID;
 }
+
+function getAllVideoID(){
+
+    let keyList = Object.keys(ytIDList);
+    let tempList = getAllID(keyList);
+
+    keyList = ["ads"];
+    tempList = ytIDList[keyList];
+    
+    return tempList;
+}

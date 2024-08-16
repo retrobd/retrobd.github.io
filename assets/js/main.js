@@ -39,12 +39,5 @@ function powerFn(){
 }
 
 function nextContentFn(){
-    let keys = Object.keys(ytIDList);
-    // keys = ["ads"];
-
-    console.log(keys);
-
-    const videoID = getVideoID(keys);
-    console.log(videoID);
-    changeVideo(videoID);
+    playNextVideo();
 }
