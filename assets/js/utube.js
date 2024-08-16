@@ -24,6 +24,10 @@ function onPlayerReady(event) {
     event.target.playVideo();
 }
 
+function changeVideo(){
+    player.loadVideoById("NiGZKrdSZkM");
+}
+
 function stopVideo() {
     player.stopVideo();
 }

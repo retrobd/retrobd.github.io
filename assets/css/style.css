@@ -21,14 +21,14 @@ div#tv_cover {
     /* padding: 2%; */
 }
 
-button#volumeButton{
+button#stopVideo{
     position: relative;
     margin-top: -20%;
     margin-left: 81%;
     opacity: 100;
 }
 
-button#tv_powerbutton{
+button#powerButton{
     position: relative;
     margin-top: 39%;
     margin-left: 85%;
@@ -62,6 +62,11 @@ div#tv_content {
     height: 320px;
     width: 400px;
 } */
+
+#tv_iframe{
+    /* background-image: url("../img/glitch-effect.gif"); */
+    display: none;
+}
 
 .center {
     margin: auto;

@@ -1,41 +1,44 @@
 console.log("loading main.js");
 
+document.getElementById('powerButton').addEventListener('click', powerFn);
+document.getElementById('nextButton').addEventListener('click', nextContentFn);
+
 let toggleFlag = null;
 let value = null;
 
 function powerFn(){
     console.log("power button clicked");
+
     var tvContent = document.getElementById('tv_content');
-    toggleFlag = !toggleFlag;
     const audio = document.getElementById('tvNoiseSound');
-    
+    toggleFlag = !toggleFlag;
+    audio.play();
+    tvContent.style.backgroundImage = "url('assets/media/glitch-effect.gif')";
+
+    // audio.loop = false;
+    // audio.currentTime = 0;
+    // audio.pause();
+
     if(toggleFlag){
         value = 1;
-        tvContent.style.backgroundImage = "";
-        addContent();
-        // audio.loop = false;
-        audio.currentTime = 0;
-        audio.pause();
-        tvContent.style.backgroundImage = "url('assets/media/glitch-effect.gif')";
+        setTimeout(() => {
+            tvContent.style.backgroundImage = "";
+            const iframe = document.getElementById("tv_iframe");
+            iframe.style.display = 'block';
+            startVideo();
+        }, 2000);
     }else{
         value = 0;
-        console.log("power off");
-        audio.loop = true;
-        audio.play();
+        stopVideo();
+        const iframe = document.getElementById("tv_iframe");
+        iframe.style.display = 'none';
         tvContent.style.backgroundImage = "url('assets/media/glitch-effect.gif')";
-        // document.getElementById("tv_content").style.opacity = value;
-        removeContent();
     }
 
     console.log("button clicked", toggleFlag);
 }
 
-function nextContent(){
+function nextContentFn(){
     removeContent();
     addContent();
-}
-
-function volumeFn(){
-    var iframe = document.getElementById('tv_iframe');
-    iframe.src = iframe.src.replace(/mute=1/, 'mute=0');
 }

@@ -1,60 +1,16 @@
 console.log("yt")
 
-document.getElementById('tv_powerbutton').addEventListener('click', startVideo);
+// document.getElementById('powerButton').addEventListener('click', powerFn);
+// document.getElementById('nextButton').addEventListener('click', nextContentFn);
+
 // document.getElementById('startVideo').addEventListener('click', pauseVideo);
-// document.getElementById('stopVideo').addEventListener('click', pauseVideo);
+// document.getElementById('stopVideo').addEventListener('click', stopVideo);
 
 // document.getElementById('pauseVideo').addEventListener('click', pauseVideo);
 // document.getElementById('resumeVideo').addEventListener('click', resumeVideo);
 
 // document.getElementById('muteVideo').addEventListener('click', muteVideo);
 // document.getElementById('unmuteVideo').addEventListener('click', unmuteVideo);
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     var iframe = document.getElementById('tv_iframe');
-
-//     iframe.addEventListener('load', function() {
-//         console.log('Iframe has finished loading.');
-//     });
-// });
-
-// document.getElementById('unmuteButton').addEventListener('click', function() {
-//     var iframe = document.getElementById('tv_iframe');
-//     var src = iframe.src;
-//     var newSrc = src.replace('mute=1', 'mute=0');
-//     iframe.src = newSrc;
-// });
-
-// document.getElementById('nextButton').addEventListener('click', function() {
-//     var iframe = document.getElementById('tv_iframe');
-//     var src = iframe.src;
-//     var newSrc = src.replace('mute=1', 'mute=0');
-//     iframe.src = newSrc;
-// });
-
-function addContent(){
-    var iframe = document.createElement('iframe');
-
-    // Set attributes for the iframe
-    iframe.src = getEmbedURL();
-    iframe.frameBorder = '0';
-    iframe.allow = 'fullscreen';
-    iframe.id = 'tv_iframe';
-
-    // Find the parent element to which the iframe will be appended
-    var container = document.getElementById('tv_content');
-
-    // Append the iframe to the container
-    container.appendChild(iframe);
-}
-
-function removeContent(){
-
-    var iframe = document.getElementById('tv_iframe');
-    if (iframe && iframe.parentNode) {
-        iframe.parentNode.removeChild(iframe);
-    }
-}
 
 function getRandomElement(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
