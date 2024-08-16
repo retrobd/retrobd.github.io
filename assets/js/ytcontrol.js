@@ -67,12 +67,13 @@ function getEmbedURL(){
     let baseURL = "";
     let autoplay = 1;
     let controls = 0;
-    let mute = 0;
-    let key_list = [ "dailymotion", "dailymotion_movie"];
-    let temp_content_list = get_tv_content_list(key_list);
-    // console.log(temp_content_list);
-    const key_content = key_list[1];
+    let mute = 1;
+    let key_list = [ "youtube", "dailymotion", "dailymotion_movie"];
+    const key_content = key_list[0];
     const key_url = key_list[0];
+
+    let temp_content_list = get_tv_content_list([key_content]);
+    // console.log(temp_content_list);
 
     const randomID = getRandomElement(temp_content_list);
     const randomURL =   tv_content_base_url[key_url] +"/"+ 

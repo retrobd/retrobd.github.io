@@ -34,3 +34,8 @@ function nextContent(){
     removeContent();
     addContent();
 }
+
+function volumeFn(){
+    var iframe = document.getElementById('tv_iframe');
+    iframe.src = iframe.src.replace(/mute=1/, 'mute=0');
+}

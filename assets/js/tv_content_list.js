@@ -1,4 +1,8 @@
 tv_content_list = {
+    "youtube" : [
+        "tgbNymZ7vqY",
+        "YqHcE_pjJhY"
+    ],
     "dailymotion": [
         "xs6lgu",
         "x23jp4x",
@@ -34,5 +38,6 @@ tv_content_list = {
 }
 
 tv_content_base_url = {
-    "dailymotion" : "https://www.dailymotion.com/embed/video"
+    "dailymotion" : "https://www.dailymotion.com/embed/video",
+    "youtube" : "https://www.youtube.com/embed"
 }
