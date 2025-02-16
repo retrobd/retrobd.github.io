@@ -48,8 +48,8 @@ function getAllVideoID(){
     let keyList = Object.keys(ytIDList);
     let tempList = getAllID(keyList);
 
-    keyList = ["me"];
-    tempList = ytIDList[keyList];
+    // keyList = ["me"];
+    // tempList = ytIDList[keyList];
     
     return tempList;
 }
