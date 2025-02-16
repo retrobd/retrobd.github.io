@@ -1,4 +1,7 @@
 ytIDList = {
+    "me" : [
+       "EOFkcqsUozI"
+    ],
     "music" : [
         "NiGZKrdSZkM",
         "Jh5oHAnDJ2U",
